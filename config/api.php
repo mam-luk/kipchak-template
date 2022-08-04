@@ -9,7 +9,7 @@ $config['api'] = [
     // 'loglevel' => \Monolog\Level::Debug
     'auth' => [
         'jwks' => [
-            'enabled' => false,
+            'enabled' => false, // to enable this globally
             'jwksUri' => 'https://auth.islamic.network/auth/realms/islamic-network/protocol/openid-connect/certs',
             'scopes' => [
                 'email',
@@ -17,7 +17,7 @@ $config['api'] = [
             ],
         ],
         'key' => [
-            'enabled' => true, // Will check for key in key query parameter (?key=xxxxxxx) or x-api-key header
+            'enabled' => true, // Will check for key in key query parameter (?key=xxxxxxx) or x-api-key header globally
             'authorised_keys' => [
                 'key1',
                 'key2',
