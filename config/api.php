@@ -3,6 +3,7 @@
 use Mamaluk\Kipchak\Helpers\Env;
 
 $config['api'] = [
+    'name' => 'kipchak-template', // Hyphen or underscore separated string
     'debug' => (bool) Env::get('DEBUG', true),
     // If debug is enabled, loglevel is debug. Otheriwse it is info. Overwrite it by specifying it below.
     // 'loglevel' => \Monolog\Level::Debug
