@@ -5,7 +5,7 @@
 * ~~OAuth Cache JWKS~~
 * ~~Global Enabelment for JWKS and Keys (goes in Kipchak)~~ 
 * CouchDB Client
-* Memcached Client
+* ~~Memcached Client~~
 * MySQL Client
 * Add tests
 * Add documentation
