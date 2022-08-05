@@ -2,8 +2,8 @@
 
 namespace Api\Controllers;
 
-use Mamaluk\Kipchak\Components\Controllers;
-use Mamaluk\Kipchak\Components\Http;
+use Mamluk\Kipchak\Components\Controllers;
+use Mamluk\Kipchak\Components\Http;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 

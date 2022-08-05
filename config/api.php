@@ -1,10 +1,10 @@
 <?php
 
-use Mamaluk\Kipchak\Helpers\Env;
+use function Mamluk\Kipchak\env;
 
-$config['api'] = [
+return [
     'name' => 'kipchak-template', // Hyphen or underscore separated string
-    'debug' => (bool) Env::get('DEBUG', true),
+    'debug' => (bool) env('DEBUG', true),
     // If debug is enabled, loglevel is debug. Otheriwse it is info. Overwrite it by specifying it below.
     // 'loglevel' => \Monolog\Level::Debug
     'auth' => [
@@ -17,7 +17,7 @@ $config['api'] = [
             ],
         ],
         'key' => [
-            'enabled' => true, // Will check for key in key query parameter (?key=xxxxxxx) or x-api-key header globally
+            'enabled' => false, // Will check for key in key query parameter (?key=xxxxxxx) or x-api-key header globally
             'authorised_keys' => [
                 'key1',
                 'key2',

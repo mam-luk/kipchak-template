@@ -2,13 +2,13 @@
 
 use Api\Controllers;
 use Api\Middlewares;
-use Mamaluk\Kipchak\Components\Middlewares\AuthJwks;
-use Mamaluk\Kipchak\Components\Middlewares\AuthKey;
+use Mamluk\Kipchak\Components\Middlewares\AuthJwks;
+use Mamluk\Kipchak\Components\Middlewares\AuthKey;
 use Slim\Routing\RouteCollectorProxy;
 
 $app->group('/v1', function(RouteCollectorProxy $group) {
 
-    $group->get('/authenticatedJWKS',
+    $group->get('/authJWKS',
         [
             Controllers\Authenticated::class,
             'getJWKS'
@@ -19,7 +19,7 @@ $app->group('/v1', function(RouteCollectorProxy $group) {
 
 $app->group('/v1', function(RouteCollectorProxy $group) {
 
-    $group->get('/authenticatedKey',
+    $group->get('/authKey',
         [
             Controllers\Authenticated::class,
             'getKey'

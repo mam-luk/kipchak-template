@@ -1,11 +1,11 @@
 <?php
 
-use Mamaluk\Kipchak\Helpers\Env;
+use function Mamluk\Kipchak\env;
 
-$config ['memached'] = [
+return [
     'default' => [
-        'host' => Env::get('MEMCACHED_HOST', 'memcached'),
-        'port' => Env::get('MEMCACHED_PORT', 11211),
+        'host' => env('MEMCACHED_HOST', 'memcached'),
+        'port' => env('MEMCACHED_PORT', 11211),
     ]
 ];
 

@@ -1,14 +1,14 @@
 <?php
 
-use Mamaluk\Kipchak\Helpers\Env;
+use function Mamluk\Kipchak\env;
 
-$config['database'] = [
+return [
     'default' => [
-        'host' => Env::get('DB_HOST', 'database'),
-        'port' => (int) Env::get('DB_PORT', 3306),
-        'name' => Env::get('DB_NAME', 'api'),
-        'user' => Env::get('DB_USER', 'api'),
-        'password' => Env::get('DB_PASSWORD', 'api'),
-        'driver' => Env::get('DB_DRIVER', 'mysql'),
+        'host' => env('DB_HOST', 'database'),
+        'port' => (int) env('DB_PORT', 3306),
+        'name' => env('DB_NAME', 'api'),
+        'user' => env('DB_USER', 'api'),
+        'password' => env('DB_PASSWORD', 'api'),
+        'driver' => env('DB_DRIVER', 'mysql'),
     ]
 ];
