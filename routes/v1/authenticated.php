@@ -1,7 +1,6 @@
 <?php
 
 use Api\Controllers;
-use Api\Middlewares;
 use Mamluk\Kipchak\Components\Middlewares\AuthJwks;
 use Mamluk\Kipchak\Components\Middlewares\AuthKey;
 use Slim\Routing\RouteCollectorProxy;

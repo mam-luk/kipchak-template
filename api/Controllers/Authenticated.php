@@ -21,6 +21,9 @@ class Authenticated extends Controllers\Slim
 
         $this->logger->debug('Checking JWT...');
 
+        // Get the token and do something with it.
+        $decodedToken = $this->container->get('token');
+
         return Http\Response::json($response,
             [
                 'status' => 'authenticatedJWKS'

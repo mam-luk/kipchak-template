@@ -15,7 +15,7 @@ use Psr\Http\Message\ServerRequestInterface;
  * logger - which returns an instance of \Monolog\Logger. This is also a protected property on your controller. Access it using $this->logger.
  */
 
-class Status extends Controllers\Slim
+class Couch extends Controllers\Slim
 {
 
     public function get(ServerRequestInterface $request, ResponseInterface $response, array $args): ResponseInterface
@@ -23,9 +23,29 @@ class Status extends Controllers\Slim
 
         $this->logger->debug('Checking Status...');
 
+        /**
+         * @var $c CouchDB
+         * See couchdb.php in the dependencies folder
+         */
+        $c = $this->container->get('couchDB');
+
+        // Create document content
+        $document = json_encode(
+            [
+                'Allahu' => 'Akbar',
+                'Alhamdu' => 'lillah',
+                'Subhan' => 'Allah'
+            ]
+        );
+
+        //$c->create('123', $document);
+
+        //$c->update('123', $document);
+
+        // $c->delete('123');
         return Http\Response::json($response,
             [
-                'status' => 'alive'
+                'document' => json_encode($c->read())
             ],
             200
         );

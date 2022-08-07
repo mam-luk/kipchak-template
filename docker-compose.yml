@@ -35,6 +35,15 @@ services:
       MYSQL_DATABASE: "api"
     container_name: database
 
+  couchdb:
+    image: couchdb:3.2
+    environment:
+      COUCHDB_USER: "api"
+      COUCHDB_PASSWORD: "api"
+    ports:
+      - "5984:5984"
+    container_name: couchdb
+
   memcached:
     image: memcached:1.5
     container_name: memcached
