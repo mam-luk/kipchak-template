@@ -27,7 +27,10 @@ class Couch extends Controllers\Slim
          * @var $c CouchDB
          * See couchdb.php in the dependencies folder
          */
-        $c = $this->container->get('couchDB');
+        $c = $this->container->get('database.couchdb.default');
+
+        // Call this if the database has not been created.
+        $c->createDatabase();
 
         // Create document content
         $document = json_encode(
@@ -38,14 +41,14 @@ class Couch extends Controllers\Slim
             ]
         );
 
-        //$c->create('123', $document);
+        $c->create('123', $document);
 
-        //$c->update('123', $document);
+        $c->update('123', $document);
 
         // $c->delete('123');
         return Http\Response::json($response,
             [
-                'document' => json_encode($c->read())
+                'document' => $c->read('123')
             ],
             200
         );

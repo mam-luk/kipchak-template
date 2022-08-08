@@ -23,7 +23,7 @@ class Cache extends Controllers\Slim
 
         $this->logger->debug('Loading cache');
 
-        $memcached = $this->container->get('cache_memcached');
+        $memcached = $this->container->get('cache.memcached.cache');
 
         $fromMemcached = $memcached->get('kipchak', function (ItemInterface $item) {
             $item->expiresAfter(3600);
@@ -31,7 +31,7 @@ class Cache extends Controllers\Slim
             return 'Ehthnic origin of the Mamluks';
         });
 
-        $file = $this->container->get('cache_file');
+        $file = $this->container->get('cache.file');
 
         $fromFile = $file->get('baybars', function (ItemInterface $item) {
             $item->expiresAfter(3600);
