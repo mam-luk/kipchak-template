@@ -6,7 +6,7 @@ return [
     'jwks' => [
         'enabled' => false, // to enable this globally
         'jwksUri' => 'https://auth.islamic.network/auth/realms/islamic-network/protocol/openid-connect/certs',
-        'validate_scopes' => true,
+        'validate_scopes' => true, // If enabled, the following scopes will be validated unless custom ones are passed to the AuthWJKS Middleware
         'scopes' => [
             'email',
             'profile'

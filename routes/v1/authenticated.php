@@ -14,7 +14,7 @@ $app->group('/v1', function(RouteCollectorProxy $group) {
         ]
     );
 
-})->add(new AuthJwks($app->getContainer()));
+})->add(new AuthJwks($app->getContainer(), ['email']));
 
 $app->group('/v1', function(RouteCollectorProxy $group) {
 
