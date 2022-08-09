@@ -2016,12 +2016,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/mam-luk/kipchak.git",
-                "reference": "a2066586bdc87254b3caff762bb25b77e85403e7"
+                "reference": "ee11370fff2621d9b19a8b6c9d8770ef89b1266c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mam-luk/kipchak/zipball/a2066586bdc87254b3caff762bb25b77e85403e7",
-                "reference": "a2066586bdc87254b3caff762bb25b77e85403e7",
+                "url": "https://api.github.com/repos/mam-luk/kipchak/zipball/ee11370fff2621d9b19a8b6c9d8770ef89b1266c",
+                "reference": "ee11370fff2621d9b19a8b6c9d8770ef89b1266c",
                 "shasum": ""
             },
             "require": {
@@ -2061,7 +2061,7 @@
                 "issues": "https://github.com/mam-luk/kipchak/issues",
                 "source": "https://github.com/mam-luk/kipchak/tree/master"
             },
-            "time": "2022-08-09T05:52:54+00:00"
+            "time": "2022-08-09T12:31:51+00:00"
         },
         {
             "name": "monolog/monolog",
