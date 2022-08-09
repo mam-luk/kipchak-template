@@ -61,3 +61,9 @@ Once the CouchDB server is up, create a database for the API:
 ```
 curl -X PUT http://api:api@localhost:5984/api_sessions
 ```
+
+
+### OpenAPI
+```
+vendor/bin/openapi api -o openapi.yaml
+```

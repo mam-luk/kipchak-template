@@ -1,0 +1,23 @@
+openapi: 3.0.0
+info:
+  title: 'Mamluk Sultans API'
+  description: "All Contollers extending Controllers\\Slim Contain the Service / DI Container as a protected property called $container.\nAccess it using $this->container in your controller.\nDefault objects bundled into a container are:\nlogger - which returns an instance of \\Monolog\\Logger. This is also a protected property on your controller. Access it using $this->logger."
+  version: '0.1'
+paths:
+  /v1/sultans:
+    get:
+      operationId: 0ff3b676ed71f9fd87b86497d9ff75d6
+      responses:
+        '200':
+          description: 'Returns a list of Sultans'
+components:
+  schemas:
+    MamlukSultan:
+      properties:
+        yearFrom:
+          type: integer
+        yearTo:
+          type: integer
+        name:
+          type: string
+      type: object
