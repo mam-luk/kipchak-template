@@ -1,12 +1,11 @@
 <?php
 
-namespace Api\Controllers;
+namespace Api\Controllers\v1;
 
 use Mamluk\Kipchak\Components\Controllers;
 use Mamluk\Kipchak\Components\Http;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
-use Symfony\Contracts\Cache\ItemInterface;
 
 /**
  * All Contollers extending Controllers\Slim Contain the Service / DI Container as a protected property called $container.

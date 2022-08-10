@@ -1,16 +1,16 @@
 <?php
 
-namespace Api\Controllers;
+namespace Api\Controllers\v1;
 
-use Api\DataTransferObjects\MamlukSultan;
+use Api\DataTransferObjects\v1\MamlukSultan;
 use Mamluk\Kipchak\Components\Controllers;
 use Mamluk\Kipchak\Components\Http;
+use OpenApi\Attributes as OA;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
-use OpenApi\Attributes as OA;
 
 /**
- * All Contollers extending Controllers\Slim Contain the Service / DI Container as a protected property called $container.
+ * All Controllers extending Controllers\Slim Contain the Service / DI Container as a protected property called $container.
  * Access it using $this->container in your controller.
  * Default objects bundled into a container are:
  * logger - which returns an instance of \Monolog\Logger. This is also a protected property on your controller. Access it using $this->logger.

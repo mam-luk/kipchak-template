@@ -2084,17 +2084,58 @@
             "time": "2022-05-16T17:09:47+00:00"
         },
         {
+            "name": "mamluk/couchdb",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mam-luk/couchdb.git",
+                "reference": "92c2ee5b16f04d4bb7c6c1a726486274e947ff71"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mam-luk/couchdb/zipball/92c2ee5b16f04d4bb7c6c1a726486274e947ff71",
+                "reference": "92c2ee5b16f04d4bb7c6c1a726486274e947ff71",
+                "shasum": ""
+            },
+            "require": {
+                "guzzlehttp/guzzle": "^7.4",
+                "illuminate/http": "^9.23",
+                "monolog/monolog": "^3.2",
+                "php": ">=8.1"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^9.5"
+            },
+            "default-branch": true,
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Mamluk\\Couch\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "A CouchDB Client and SessionHandler",
+            "support": {
+                "issues": "https://github.com/mam-luk/couchdb/issues",
+                "source": "https://github.com/mam-luk/couchdb/tree/master"
+            },
+            "time": "2022-08-10T07:46:17+00:00"
+        },
+        {
             "name": "mamluk/kipchak",
             "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mam-luk/kipchak.git",
-                "reference": "93046ca28e298ca68246e15a15ef4a1d2ee8a4b0"
+                "reference": "78a00b2a55226047c79cd778fa588afc912b3fec"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mam-luk/kipchak/zipball/93046ca28e298ca68246e15a15ef4a1d2ee8a4b0",
-                "reference": "93046ca28e298ca68246e15a15ef4a1d2ee8a4b0",
+                "url": "https://api.github.com/repos/mam-luk/kipchak/zipball/78a00b2a55226047c79cd778fa588afc912b3fec",
+                "reference": "78a00b2a55226047c79cd778fa588afc912b3fec",
                 "shasum": ""
             },
             "require": {
@@ -2103,6 +2144,7 @@
                 "firebase/php-jwt": "^6.3",
                 "guzzlehttp/guzzle": "^7.4",
                 "illuminate/http": "^9.23",
+                "mamluk/couchdb": "dev-master",
                 "monolog/monolog": "^3.2",
                 "php": ">=8.1",
                 "php-di/php-di": "^6.4",
@@ -2137,7 +2179,7 @@
                 "issues": "https://github.com/mam-luk/kipchak/issues",
                 "source": "https://github.com/mam-luk/kipchak/tree/master"
             },
-            "time": "2022-08-10T05:31:13+00:00"
+            "time": "2022-08-10T07:44:21+00:00"
         },
         {
             "name": "monolog/monolog",

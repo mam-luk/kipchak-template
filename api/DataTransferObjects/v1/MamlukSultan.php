@@ -1,12 +1,13 @@
 <?php
 
-namespace Api\DataTransferObjects;
+namespace Api\DataTransferObjects\v1;
 
-use Spatie\DataTransferObject\DataTransferObject;
+use Api\DataTransferObjects\NumberBetween;
 use OpenApi\Attributes as OA;
+use Spatie\DataTransferObject\DataTransferObject;
 
 
- #[OA\Schema()]
+#[OA\Schema()]
 class MamlukSultan extends DataTransferObject
 {
     #[OA\Property(property: 'yearFrom', type: 'integer')]

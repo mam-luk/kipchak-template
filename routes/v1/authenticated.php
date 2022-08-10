@@ -9,7 +9,7 @@ $app->group('/v1', function(RouteCollectorProxy $group) {
 
     $group->get('/authJWKS',
         [
-            Controllers\Authenticated::class,
+            Controllers\v1\Authenticated::class,
             'getJWKS'
         ]
     );
@@ -20,7 +20,7 @@ $app->group('/v1', function(RouteCollectorProxy $group) {
 
     $group->get('/authKey',
         [
-            Controllers\Authenticated::class,
+            Controllers\v1\Authenticated::class,
             'getKey'
         ]
     );

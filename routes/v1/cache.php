@@ -7,7 +7,7 @@ $app->group('/v1', function(RouteCollectorProxy $group) {
 
     $group->get('/cache',
         [
-            Controllers\Cache::class,
+            Controllers\v1\Cache::class,
             'get'
         ]
     );

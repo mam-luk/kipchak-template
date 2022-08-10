@@ -1,6 +1,6 @@
 <?php
 
-namespace Api\Controllers;
+namespace Api\Controllers\v1;
 
 use Mamluk\Kipchak\Components\Controllers;
 use Mamluk\Kipchak\Components\Http;

@@ -7,7 +7,7 @@ $app->group('/v1', function(RouteCollectorProxy $group) {
 
     $group->get('/session',
         [
-            Controllers\Session::class,
+            Controllers\v1\Session::class,
             'get'
         ]
     );

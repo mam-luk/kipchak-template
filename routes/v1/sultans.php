@@ -7,7 +7,7 @@ $app->group('/v1', function(RouteCollectorProxy $group) {
 
     $group->get('/sultans',
         [
-            Controllers\Sultans::class,
+            Controllers\v1\Sultans::class,
             'get'
         ]
     );
