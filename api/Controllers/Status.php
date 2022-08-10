@@ -27,7 +27,11 @@ class Status extends Controllers\Slim
             [
                 'status' => 'alive'
             ],
-            200
+            200,
+            true,
+            86400,
+            $this->container->get('cache.http')
+
         );
     }
 
