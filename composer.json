@@ -1,4 +1,6 @@
 {
+    "name": "mamluk/kipchak-template",
+    "type": "template",
     "require": {
         "mamluk/kipchak": "dev-master"
     },
