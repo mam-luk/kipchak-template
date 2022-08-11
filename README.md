@@ -19,12 +19,27 @@ composer create-project mamluk/kipchak-template [api-name]
 
 Replace [api-name] with the desired directory name for your new application.
 
+## Some Pilosophy for the Philosophware Engineers
+The Kipchak template is structured with some assumptions about how APIs should be developed. These are
+based around understanding definitions of certain common concepts like Entities, Models, etc. Our definitions
+are spelled out here. We'll deal with these in the order in which a request flows through Kipchak.
+
+* Routes
+* Middlewares
+* Controllers
+* Models
+* Entities
+* Data Transfer Objects
+
 ## Understanding how Kipchak bootstraps
 
+### The Layout of the Land
+
+
 ## Kipchak provided database and cache clients
-* Memached (based on Symfony Cache)
+* Memcached (based on Symfony Cache)
 * Apache CouchDB (3.2+)
-* MySQL or a drop-in (Percona, MariaDB, etc.) (Based on Doctrine)
+* MySQL or a MySQL drop-in (Percona, MariaDB, etc.) (based on Doctrine)
 
 
 ## Understanding Config
