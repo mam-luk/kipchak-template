@@ -6,7 +6,7 @@ return [
     'enabled' => true,
     'name' => 'kipchak-api', // Session name in the browser
     'lifetime' => '30 days',
-    'store' => 'memcached', // couchdb or memcached
+    'store' => 'couchdb', // couchdb or memcached
     'store_config' => [
         'couchdb' => [
             'connection' => 'default',

@@ -1,4 +1,6 @@
-# Kipchak template
+<img src="https://raw.githubusercontent.com/mam-luk/kipchak/master/.mamluk/logo.svg" />
+
+# Kipchak Starter Template
 
 This is a starter project based on the Kipchak (https://github.com/mam-luk/kipchak) tookit - 
 which is a set of components added on top of Slim Framework (https://www.slimframework.com/) - to 
@@ -28,13 +30,15 @@ any anything within Slim, and you can still use it as a vanilla Slim application
 
 ## Is your API a BFF? Managing state
 
+### To Do
+
 * ~~OAuth verification~~
 * ~~Key based Auth~~
 * ~~OAuth Cache JWKS~~
 * ~~Global Enabelment for JWKS and Keys (goes in Kipchak)~~ 
 * ~~CouchDB Client~~
 * ~~Memcached Client~~
-* MySQL Client
+* ~~MySQL Client~~
 * ~~Session Management with CouchDB~~
 * ~~Session Management with Memcached~~
 * ~~HTTP Client~~
@@ -43,20 +47,35 @@ any anything within Slim, and you can still use it as a vanilla Slim application
 * Add sample helm / k8s
 * ~~Rename config files~~
 * ~~Session to use cache pools and db connections~~
-* split out CDB client and CDB session handler
+* ~~Split out CDB client and CDB session handler~~
 
 
 ### CouchDB
-Once the CouchDB server is up, create a database for the API:
+Once the CouchDB Container comes up, you might see some errors in the log. This is because
+Couchbase expects a _users database to be created for user management. Let's create this 
+so Couchbase is ready to be used. Run the following on your terminal
+
 ```
 curl -X PUT http://api:api@localhost:5984/_users
 curl -X PUT http://api:api@localhost:5984/api
 ```
 
+You can also create a new database(s) for managing any data your API creates. Let's create a database called 'api':
+
+```
+curl -X PUT http://api:api@localhost:5984/api
+```
+
 ### Session Handling
+If you are  building  a Backend for Frontend (BfF) with Kipchak, you will need to enable session handling.
+Kipchak supports sessions using either CouchDB or Memcached. This can be configured in config/kipchak.sessions.php.
 
 #### With CouchDB
-Once the CouchDB server is up, create a database for the API:
+
+If you are enabling session management with CouchDB in the kipchak.sessions.php config file in the config folder, you
+should also create database to manage these sessions. Please ensure the database name manages the name on https://github.com/mam-luk/kipchak-template/blob/master/config/kipchak.sessions.php#L13.
+
+If this is set to API sessions, run the following in your terminal to create the database:
 
 ```
 curl -X PUT http://api:api@localhost:5984/api_sessions
