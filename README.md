@@ -10,6 +10,15 @@ This template demonstrates all the features of Kipchack which configurable large
 the config folder, and it lays out a foundation for an opinionated way of using Slim. It does not restrict
 any anything within Slim, and you can still use it as a vanilla Slim application.
 
+## Install and Get Started
+Run this command from the directory in which you want to install your new Kipchak template.
+
+```
+composer create-project mamluk/kipchak-template [api-name]
+```
+
+Replace [api-name] with the desired directory name for your new application.
+
 ## Understanding how Kipchak bootstraps
 
 ## Kipchak provided database and cache clients
@@ -44,7 +53,7 @@ any anything within Slim, and you can still use it as a vanilla Slim application
 * ~~HTTP Client~~
 * Add tests
 * Add documentation
-* Add sample helm / k8s
+* Add sample helm / k8s manifest
 * ~~Rename config files~~
 * ~~Session to use cache pools and db connections~~
 * ~~Split out CDB client and CDB session handler~~
