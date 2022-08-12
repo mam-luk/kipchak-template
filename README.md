@@ -24,12 +24,34 @@ The Kipchak template is structured with some assumptions about how APIs should b
 based around understanding definitions of certain common concepts like Entities, Models, etc. Our definitions
 are spelled out here. We'll deal with these in the order in which a request flows through Kipchak.
 
-* Routes
-* Middlewares
-* Controllers
-* Models
-* Entities
-* Data Transfer Objects
+* Routes - These are the first port of entry into your api. Specified in the ```routes``` directory, 
+these should be versioned and generally call a controller, with or without invoking some middleware. They 
+determine the URL and HTTP verb of an endpoint in your API.
+
+* Middlewares - Middleware is general, re-usable functionality you want to apply to one or more routes 
+before they reach the controller or just before a response is served. Global middlewares can be configured 
+in the ```middlewares``` directory.
+
+* Controllers - These are where you decided what to do with a request that comes in. These should also be 
+versioned alongside the routes so breaking changes to your API contracts can be managed consistently. Controllers
+will usually receive an HTTP request, pass it to a Data Transfer Object to ensure that it meets the requirements
+for the request, then pass the DTO to the model, which may invoke some business logic and entities before passing the response
+back to the client. Controllers will also contain part of your OpenAPI specification.
+* Models - This is where you write your business logic - what happens between the database or a third party API and 
+your API.
+
+* Entities - These are representations of your database schema in code. If you use Doctrine for an RBDMS, you
+will specify Doctrine entities here. If you are using Couchbase, you would have an object representation of what 
+will get stored in a CouchDB document.
+
+* Data Transfer Objects - These are effectively what represent the data transferred to and from your API to
+HTTP clients. These must be versioned, and are the first step to ensuring that any data that comes with the 
+request matches what you expect. These must also be versioned, as they are ultimately what form the API contract.
+
+* Dependencies - Dependencies are common libraries or classes that you might want to use throughout your API.
+You inject them as dependencies into the service container so they are created only once during the request / response
+lifecycle, saving memory, cpu and valuable milliseconds. Explaining what a service / IO / dpendency container is is not part 
+of the scope of this documentation, but if you don't know what it is, <a href="http://fabien.potencier.org/do-you-need-a-dependency-injection-container.html" target="_blank">this article</a> can help.
 
 ## Understanding how Kipchak bootstraps
 
