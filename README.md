@@ -2,9 +2,9 @@
 
 # Kipchak Starter Template
 
-This is a starter project based on the Kipchak (https://github.com/mam-luk/kipchak) tookit - 
-which is a set of components added on top of Slim Framework (https://www.slimframework.com/) - to 
-help build APIs quickly. Learn more about why Kipchak on https://github.com/mam-luk/kipchak.
+This is a starter project based on the Kipchak (https://github.com/mam-luk/kipchak) API Development Kit (ADK) - 
+which is a set of components added on top of Slim Framework (https://www.slimframework.com/) to 
+help build APIs rapidly. Learn more about why Kipchak on https://github.com/mam-luk/kipchak.
 
 This template demonstrates all the features of Kipchack which are configurable largely via YAML files under 
 the config folder, and it lays out a foundation for an opinionated way of using Slim. It does not restrict
