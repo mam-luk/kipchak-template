@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d6888db6989f13e24808f757064825b5",
+    "content-hash": "23335e8dc50c965e33721701cf81eeb3",
     "packages": [
         {
             "name": "bryanjhv/slim-session",
@@ -2120,22 +2120,22 @@
             "description": "A CouchDB Client and SessionHandler",
             "support": {
                 "issues": "https://github.com/mam-luk/couchdb/issues",
-                "source": "https://github.com/mam-luk/couchdb/tree/master"
+                "source": "https://github.com/mam-luk/couchdb/tree/0.1"
             },
             "time": "2022-08-10T08:03:26+00:00"
         },
         {
             "name": "mamluk/kipchak",
-            "version": "dev-master",
+            "version": "0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mam-luk/kipchak.git",
-                "reference": "002ce76e2985bad4d7aee6a3540ebbff60599316"
+                "reference": "a14eab1bd4098d3de3f5969998d524aafedcb6f4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mam-luk/kipchak/zipball/002ce76e2985bad4d7aee6a3540ebbff60599316",
-                "reference": "002ce76e2985bad4d7aee6a3540ebbff60599316",
+                "url": "https://api.github.com/repos/mam-luk/kipchak/zipball/a14eab1bd4098d3de3f5969998d524aafedcb6f4",
+                "reference": "a14eab1bd4098d3de3f5969998d524aafedcb6f4",
                 "shasum": ""
             },
             "require": {
@@ -2157,7 +2157,6 @@
             "require-dev": {
                 "phpunit/phpunit": "^9.5"
             },
-            "default-branch": true,
             "type": "library",
             "autoload": {
                 "psr-4": {
@@ -2176,9 +2175,9 @@
             ],
             "support": {
                 "issues": "https://github.com/mam-luk/kipchak/issues",
-                "source": "https://github.com/mam-luk/kipchak/tree/master"
+                "source": "https://github.com/mam-luk/kipchak/tree/0.1"
             },
-            "time": "2022-08-11T06:03:24+00:00"
+            "time": "2022-08-12T19:11:51+00:00"
         },
         {
             "name": "monolog/monolog",
@@ -7586,9 +7585,7 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": {
-        "mamluk/kipchak": 20
-    },
+    "stability-flags": [],
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": [],
