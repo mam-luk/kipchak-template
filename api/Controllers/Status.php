@@ -3,7 +3,6 @@
 namespace Api\Controllers;
 
 use Mamluk\Kipchak\Components\Controllers;
-use Mamluk\Kipchak\Components\Database\Clients\CouchDB;
 use Mamluk\Kipchak\Components\Http;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
