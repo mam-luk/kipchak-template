@@ -15,7 +15,7 @@ services:
       DB_USER: "api"
       DB_PASSWORD: "api"
       DB_NAME: "api"
-      DB_HOST: "database"
+      DB_HOST: "mysql"
       DB_PORT: "3306"
       MEMCACHED_HOST: "memcached"
       MEMCACHED_PORT: 11211
