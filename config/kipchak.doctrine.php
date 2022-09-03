@@ -15,7 +15,7 @@ return
                     'host' => env('DB_HOST', 'mysql'),
                     'port' => env('DB_PORT', 3306),
                     'driver' => 'pdo_mysql',
-                    'charset' => 'utf-8'
+                    'charset' => 'utf8'
                 ]
             ]
     ],
