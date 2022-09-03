@@ -9,8 +9,8 @@ return
         'connections' => [
             // https://www.doctrine-project.org/projects/doctrine-dbal/en/current/reference/configuration.html
                 'primary' => [
-                    'database' => 'mydb',
-                    'username' => env('DB_USER', 'api'),
+                    'dbname' => 'mydb',
+                    'user' => env('DB_USER', 'api'),
                     'password' =>  env('DB_PASSWORD', 'api'),
                     'host' => env('DB_HOST', 'mysql'),
                     'port' => env('DB_PORT', 3306),
