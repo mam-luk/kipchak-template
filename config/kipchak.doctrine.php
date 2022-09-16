@@ -5,7 +5,7 @@ use function Mamluk\Kipchak\env;
 return
 [
     'dbal' => [
-        'enabled' => true,
+        'enabled' => false,
         'connections' => [
             // https://www.doctrine-project.org/projects/doctrine-dbal/en/current/reference/configuration.html
                 'primary' => [
@@ -21,7 +21,7 @@ return
     ],
 
     'orm' => [
-        'enabled' => true,
+        'enabled' => false,
         'entity_managers' => [
             'primary' => [
                 // Enables or disables Doctrine metadata caching
