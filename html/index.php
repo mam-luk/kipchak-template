@@ -8,4 +8,6 @@ use Mamluk\Kipchak\Api;
 // Instantiate Slim, load dependencies and middlewares
 $app = Api::boot();
 
+$app->addBodyParsingMiddleware();
+
 $app->run();
