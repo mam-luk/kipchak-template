@@ -3,7 +3,7 @@
 use function Mamluk\Kipchak\env;
 
 return [
-    'enabled' => true,
+    'enabled' => false,
     'name' => 'kipchak-api', // Session name in the browser
     'lifetime' => '30 days',
     'store' => 'couchdb', // couchdb or memcached
