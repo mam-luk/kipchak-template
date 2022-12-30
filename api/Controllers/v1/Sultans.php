@@ -8,7 +8,7 @@ use Mamluk\Kipchak\Components\Http;
 use OpenApi\Attributes as OA;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
-
+use CuyZ\Valinor as Data;
 /**
  * All Controllers extending Controllers\Slim Contain the Service / DI Container as a protected property called $container.
  * Access it using $this->container in your controller.
@@ -27,21 +27,29 @@ class Sultans extends Controllers\Slim
 
         $this->logger->debug('Checking Status...');
 
-        $sultan1 = new MamlukSultan([
+        $sultan1 = [
            'yearFrom'   => 1251,
            'yearTo'     => 1257,
             'name'      => 'Qutuz Al Din'
-        ]);
+        ];
 
-        $sultan2 = new MamlukSultan([
+        $sultan2 = [
             'yearFrom'   => 1257,
             'yearTo'     => 1277,
             'name'      => 'Baybars'
-        ]);
+        ];
+
+        $x1 = (new Data\MapperBuilder())
+            ->mapper()
+            ->map(MamlukSultan::class, Data\Mapper\Source\Source::array($sultan1));
+
+        $x2 = (new Data\MapperBuilder())
+            ->mapper()
+            ->map(MamlukSultan::class, Data\Mapper\Source\Source::array($sultan2));
 
         return Http\Response::json($response,
             [
-                'sultans' => [$sultan1, $sultan2]
+                'sultans' => [$x1, $x2]
             ],
             200
         );
