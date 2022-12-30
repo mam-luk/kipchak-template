@@ -14,7 +14,7 @@ any anything within Slim, and you can still use it as a vanilla Slim application
 Run this command from the directory in which you want to install your new Kipchak template.
 
 ```
-composer create-project mamluk/kipchak-template [api-name]
+composer create-project mamluk/kipchak-template [api-name] -s dev
 ```
 
 Replace [api-name] with the desired directory name for your new application.
