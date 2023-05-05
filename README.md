@@ -6,20 +6,20 @@ This is a starter project based on the Kipchak (https://github.com/mam-luk/kipch
 which is a set of components added on top of Slim Framework (https://www.slimframework.com/) to 
 help build APIs rapidly. Learn more about why Kipchak on https://github.com/mam-luk/kipchak.
 
-This template demonstrates all the features of Kipchack which are configurable largely via YAML files under 
+This template demonstrates all the features of Kipchak which are configurable largely via YAML files in 
 the config folder, and it lays out a foundation for an opinionated way of using Slim. It does not restrict
 any anything within Slim, and you can still use it as a vanilla Slim application.
 
 ## Install and Get Started
-Run this command from the directory in which you want to install your new Kipchak template.
+Run this command from the directory in which you want to install your new Kipchak API.
 
 ```
 composer create-project mamluk/kipchak-template [api-name] -s dev
 ```
 
-Replace [api-name] with the desired directory name for your new application.
+Replace ```[api-name]``` with the desired directory name for your new application.
 
-## Some Pilosophy for the Philosophware Engineers
+## Some Philosophy for the Philosophware Engineers
 The Kipchak template is structured with some assumptions about how APIs should be developed. These are
 based around understanding definitions of certain common concepts like Entities, Models, etc. Our definitions
 are spelled out here. We'll deal with these in the order in which a request flows through Kipchak.
