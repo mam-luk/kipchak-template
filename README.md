@@ -32,11 +32,11 @@ determine the URL and HTTP verb of an endpoint in your API.
 before they reach the controller or just before a response is served. Global middlewares can be configured 
 in the ```middlewares``` directory.
 
-* Controllers - These are where you decided what to do with a request that comes in. These should also be 
+* Controllers - These are where you decide how to process an HTTP request. These should also be 
 versioned alongside the routes so breaking changes to your API contracts can be managed consistently. Controllers
 will usually receive an HTTP request, pass it to a Data Transfer Object to ensure that it meets the requirements
 for the request, then pass the DTO to the model, which may invoke some business logic and entities before passing the response
-back to the client. Controllers will also contain part of your OpenAPI specification.
+back to the client. Controllers will also contain PHP attriubutes which formulate part of your OpenAPI specification.
 * Models - This is where you write your business logic - what happens between the database or a third party API and 
 your API.
 
@@ -45,7 +45,7 @@ will specify Doctrine entities here. If you are using Couchbase, you would have 
 will get stored in a CouchDB document.
 
 * Data Transfer Objects - These are effectively what represent the data transferred to and from your API to
-HTTP clients. These must be versioned, and are the first step to ensuring that any data that comes with the 
+HTTP clients or any other systems external to your API. These must be versioned, and are the first step to ensuring that any data that comes with the 
 request matches what you expect. These must also be versioned, as they are ultimately what form the API contract.
 
 * Dependencies - Dependencies are common libraries or classes that you might want to use throughout your API.
@@ -62,7 +62,6 @@ of the scope of this documentation, but if you don't know what it is, <a href="h
 * Memcached (based on Symfony Cache)
 * Apache CouchDB (3.2+)
 * MySQL or a MySQL drop-in (Percona, MariaDB, etc.) (based on Doctrine)
-
 
 ## Understanding Config
 
