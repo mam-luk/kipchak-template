@@ -45,6 +45,6 @@ services:
     container_name: couchdb
 
   memcached:
-    image: memcached:1.5
+    image: memcached:1.6
     container_name: memcached
 

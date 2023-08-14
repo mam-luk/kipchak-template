@@ -1,0 +1,37 @@
+{
+  "listeners": {
+    "*:8080": {
+      "pass": "routes/main"
+    }
+  },
+  "applications": {
+    "kipchak": {
+      "type": "php",
+      "user": "nobody",
+      "limits": {
+        "timeout": 5,
+        "requests": 10000
+      },
+      "processes": {
+        "max": 25,
+        "spare": 5,
+        "idle_timeout": 5
+      },
+      "root": "/var/www/html",
+      "index": "index.php",
+      "script": "index.php"
+    }
+  },
+  "routes": {
+    "main": [
+      {
+        "match": {
+          "uri": "*"
+        },
+        "action": {
+          "pass": "applications/kipchak"
+        }
+      }
+    ]
+  }
+}
