@@ -49,7 +49,9 @@ return
                         // Path where Doctrine will cache the processed metadata when 'dev_mode' is false
                         'dir' => '/tmp',
                     ]
-                ]
+                ],
+                // This will make sure Doctrine ORM does not manage tables beginning with mamluk_
+                'schema_filter_expression' => '"~^(?!mamluk_)~"'
             ],
         ]
     ]
