@@ -16,12 +16,9 @@ use CuyZ\Valinor as Data;
  * logger - which returns an instance of \Monolog\Logger. This is also a protected property on your controller. Access it using $this->logger.
  */
 
-#[OA\Info(title: "Mamluk Sultans API", version: "0.1")]
 class Sultans extends Controllers\Slim
 {
 
-    #[OA\Get(path: '/v1/sultans')]
-    #[OA\Response(response: '200', description: 'Returns a list of Sultans')]
     public function get(ServerRequestInterface $request, ResponseInterface $response, array $args): ResponseInterface
     {
 

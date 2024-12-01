@@ -125,9 +125,3 @@ If this is set to API sessions, run the following in your terminal to create the
 ```
 curl -X PUT http://api:api@localhost:5984/api_sessions
 ```
-
-
-### OpenAPI
-```
-vendor/bin/openapi api -o openapi.yaml
-```
